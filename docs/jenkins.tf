@@ -20,21 +20,11 @@ resource "docker_network" "jenkins_network" {
 # Crea el volumen de certificados
 resource "docker_volume" "jenkins-docker-certs" {
   name = "jenkins-docker-certs"
-  
-  # Evita que se elimine el volumen
-  lifecycle {
-    prevent_destroy = true
-  }
 }
 
 # Crea el volumen de datos
 resource "docker_volume" "jenkins-data" {
   name = "jenkins-data"
-
-  # Evita que se elimine el volumen
-  lifecycle {
-    prevent_destroy = true
-  }
 }
 
 
