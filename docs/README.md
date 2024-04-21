@@ -5,27 +5,27 @@
 docker build -t myjenkins-blueocean . 
 ```
 
-## 2. Copiar la contraseña para desbloquear Jenkins
+## 2. Inicializar terraform 
+```
+terraform init 
+```
+
+## 3. Crear un plan para terraform
+```
+terraform plan 
+```
+
+## 4. Desplegar los contenedores con terraform
+```
+terraform apply 
+```
+
+## 5. Copiar la contraseña para desbloquear Jenkins
 1. Acceder a los logs del contenedor
 ```
 docker logs jenkins-blueocean
 ```
 2. Obtener la contraseña
-
-## 3. Inicializar terraform 
-```
-terraform init 
-```
-
-## 4. Crear un plan para terraform
-```
-terraform plan 
-```
-
-## 5. Desplegar los contenedores con terraform
-```
-terraform apply 
-```
 
 ## 6. Acceder a Jenkins en http://localhost:8080
 
